@@ -4,6 +4,7 @@ import tornado.web
 from src import config
 
 global_template_args = {}
+
 # The cooler RequestHandler
 class BaseRoute(tornado.web.RequestHandler):
     # Render a template.
@@ -23,6 +24,7 @@ class BaseRoute(tornado.web.RequestHandler):
         self.set_status(404)
         self.render("errors/404")
 
+# Default route
 class NotFoundRoute(BaseRoute):
     def get(self, *a, **ka):
         self.not_found()

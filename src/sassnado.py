@@ -4,6 +4,8 @@ import sass
 
 from src import route
 
+# Route configured to compile and send SCSS stylesheets
+# TODO: support for indented SASS
 class SassHandler(route.BaseRoute):
     def initialize(self, path):
         self.path = path

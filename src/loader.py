@@ -1,6 +1,7 @@
 import os
 import tornado.web
 
+# Template loader configured to function more like Sinatra's
 class ViewLoader(tornado.template.DictLoader):
     def __init__(self, root_dir: str, autoescape = "xhtml_escape"):
         # recursively compile a compendium of all templates
